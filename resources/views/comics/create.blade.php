@@ -9,8 +9,8 @@
             @csrf
             @method('POST')
             <div class="mb-3">
-              <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" name="">
+              <label for="title" class="form-label">title</label>
+              <input type="text" class="form-control" id="title" name="title">
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">description</label>
@@ -18,19 +18,19 @@
               </div>
               <div class="mb-3">
                 <label for="thumb" class="form-label">thumb</label>
-                <input type="text" class="form-control" id="thumb" name="">
+                <input type="text" class="form-control" id="thumb" name="thumb">
               </div>
               <div class="mb-3">
                 <label for="series" class="form-label">series</label>
-                <input type="text" class="form-control" id="series" name="">
+                <input type="text" class="form-control" id="series" name="series">
               </div>
               <div class="mb-3">
                 <label for="author" class="form-label">author</label>
-                <input type="text" class="form-control" id="author" name="">
+                <input type="text" class="form-control" id="author" name="author">
               </div>
               <div class="mb-3">
                 <label for="price" class="form-label">price</label>
-                <input type="number" class="form-control" id="price" name="">
+                <input type="number" class="form-control" id="price" name="price">
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

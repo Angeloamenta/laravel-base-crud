@@ -35,7 +35,19 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // test
+        // @dd($request->all());
+
+        $data = $request->all();
+        $comic = new comic();
+        $comic->fill($data); //inviao tutti i dati inseriti nel fillable
+        $comic->save();
+        //check controllo
+
+        //cambio indirizzo in browser in automatico
+        //http://127.0.0.1:8000/monitors/id
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
