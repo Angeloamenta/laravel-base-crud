@@ -16,8 +16,12 @@
             </div>
             @endforeach
           </div>
-    
       </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ $comics->links() }}
+        </div>
     </div>
   </div>
 @endsection
