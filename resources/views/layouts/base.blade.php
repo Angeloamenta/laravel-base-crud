@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('dctitle')</title>
+    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
+    <title>title</title>
 </head>
 <body>
+    <header>Header</header>
     @yield('content')
+    <footer>Footer</footer>
 </body>
 </html>
