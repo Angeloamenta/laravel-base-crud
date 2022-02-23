@@ -47,7 +47,7 @@ class ComicController extends Controller
 
         //cambio indirizzo in browser in automatico
         //http://127.0.0.1:8000/monitors/id
-        return redirect()->route('comics.show', $comic->id);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
@@ -58,7 +58,10 @@ class ComicController extends Controller
      */
     public function show(comic $comic)
     {
-        //
+        $data = [
+            'comic' => $comic,
+            ];
+        return view('comics.show', $data);
     }
 
     /**
