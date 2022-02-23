@@ -16,5 +16,5 @@ class comic extends Model
         'price',
         'created_at',
         'updated_at'
-    ]
+    ];
 }
