@@ -5,12 +5,33 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <form>
+        <form action="{{ route('comics.store') }}" method="post">
+            @csrf
+            @method('POST')
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" name="">
             </div>
-            
+            <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="thumb" class="form-label">thumb</label>
+                <input type="text" class="form-control" id="thumb" name="">
+              </div>
+              <div class="mb-3">
+                <label for="series" class="form-label">series</label>
+                <input type="text" class="form-control" id="series" name="">
+              </div>
+              <div class="mb-3">
+                <label for="author" class="form-label">author</label>
+                <input type="text" class="form-control" id="author" name="">
+              </div>
+              <div class="mb-3">
+                <label for="price" class="form-label">price</label>
+                <input type="number" class="form-control" id="price" name="">
+              </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
       </div>
