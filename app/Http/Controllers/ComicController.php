@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\comic;
+use App\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -44,7 +44,7 @@ class ComicController extends Controller
         // @dd($request->all());
 
         $data = $request->all();
-        $comic = new comic();
+        $comic = new Comic(); 
         $comic->fill($data); //inviao tutti i dati inseriti nel fillable
         $comic->save();
         //check controllo
@@ -57,10 +57,10 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function show(comic $comic)
+    public function show(Comic $comic)
     {
         $data = [
             'comic' => $comic,
@@ -71,10 +71,10 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function edit(comic $comic)
+    public function edit(Comic $comic)
     {
         return view('comics.edit', ['comic' => $comic]);
     }
@@ -83,10 +83,10 @@ class ComicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, comic $comic)
+    public function update(Request $request, Comic $comic)
     {
         // @dd($request->all());
         $data = $request->all();
@@ -99,10 +99,10 @@ class ComicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\comic  $comic
+     * @param  \App\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function destroy(comic $comic)
+    public function destroy(Comic $comic)
     {
         //
     }
