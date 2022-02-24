@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('comics', 'ComicController');
 Route::get('/', 'ComicController@index');
+// Route::put('/comics/{comic}', 'ComicController@update')->name('comics.update');
