@@ -11,8 +11,9 @@
               <div class="card-body">
                 <h5 class="card-title"><a href="{{ route('comics.show', $comic) }}">{{$comic['title']}}</a></h5>
                 <p class="card-text">{{$comic['description']}}</p>
-                <p class="card-text"><small class="text-muted">{{$comic['price']}}</small></p>
-                <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">Edit</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted"><a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">Edit</a></small>
               </div>
             </div>
             @endforeach
