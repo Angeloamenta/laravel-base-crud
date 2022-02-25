@@ -88,6 +88,18 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $validateData = $request->validate([
+            
+            'title'=>'required',
+            'description'=>'required',
+            'thumb'=>'required',
+            'series'=>'required',
+            'author'=>'required',
+            'price'=>'required|numeric'
+        ]);
+
+       
+
         // @dd($request->all());
         $data = $request->all();
         $comic->update($data);
