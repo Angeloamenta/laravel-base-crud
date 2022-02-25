@@ -40,6 +40,17 @@ class ComicController extends Controller
     public function store(Request $request)
     {
 
+        //è possibile evitare di ripetere l'operazione creando una variabile
+        // all'inizio della funzione, che contiene i seguenti dati.
+        $validateData = $request->validate([
+            
+            'title'=>'required',
+            'description'=>'required',
+            'thumb'=>'required',
+            'series'=>'required',
+            'author'=>'required',
+            'price'=>'required|numeric'
+        ]);
         // test
         // @dd($request->all());
 
