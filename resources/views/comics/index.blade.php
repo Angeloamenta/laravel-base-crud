@@ -1,6 +1,9 @@
 @extends('layouts.base')
 
 @section('content')
+@if (session('status'))
+    {{session('status')}}
+@endif
 <div class="container">
     <div class="row">
       <div class="col">
@@ -13,7 +16,14 @@
                 <p class="card-text">{{$comic['description']}}</p>
               </div>
               <div class="card-footer">
-                <small class="text-muted"><a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">Edit</a></small>
+                <small class="text-muted">
+                  <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">Edit</a>
+                <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <input class="btn btn-danger" type="submit" value="Elimina">
+                  </small>
+                </form>
               </div>
             </div>
             @endforeach
